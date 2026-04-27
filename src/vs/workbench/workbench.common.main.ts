@@ -211,6 +211,9 @@ import './contrib/bulkEdit/browser/bulkEditService.js';
 import './contrib/search/browser/search.contribution.js';
 import './contrib/search/browser/searchView.js';
 
+// Sidex Chat
+import './contrib/sidexChat/browser/sidexChat.contribution.js';
+
 // Search Editor
 import './contrib/searchEditor/browser/searchEditor.contribution.js';
 

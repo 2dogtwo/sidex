@@ -205,6 +205,10 @@ body {
 	font-size: 16px; /* sets font-size for codicons in workbench (https://github.com/microsoft/vscode/issues/98495) */
 }
 
+.monaco-workbench .codicon[class*='codicon-'].codicon-sm {
+	font-size: 10px;
+}
+
 .monaco-workbench .predefined-file-icon[class*='codicon-']::before {
 	width: 16px;
 	padding-left: 3px; /* width (16px) - font-size (13px) = padding-left (3px) */

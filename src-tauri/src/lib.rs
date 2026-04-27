@@ -516,6 +516,8 @@ pub fn run() {
             }
         })
         .invoke_handler(tauri::generate_handler![
+            // AI Agent
+            commands::agent::agent_execute_tool,
             // File system
             commands::read_file,
             commands::read_file_bytes,

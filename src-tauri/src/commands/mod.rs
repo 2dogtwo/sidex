@@ -1,3 +1,4 @@
+pub mod agent;
 pub mod compress;
 pub mod crypto;
 pub mod db_state;

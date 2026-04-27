@@ -105,6 +105,7 @@ sidex-syntax = { path = "../crates/sidex-syntax" }
 sidex-tasks = { path = "../crates/sidex-tasks" }
 sidex-extensions = { path = "../crates/sidex-extensions" }
 sidex-terminal = { path = "../crates/sidex-terminal" }
+sidex-agent = { path = "../crates/sidex-agent" }
 sidex-lsp = { path = "../crates/sidex-lsp" }
 sidex-keymap = { path = "../crates/sidex-keymap" }
 sidex-extension-api = { path = "../crates/sidex-extension-api" }

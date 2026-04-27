@@ -98,3 +98,15 @@ extensions-rust/css-language-extension/css-builtin.json
 extensions-rust/css-language-extension/src/css_data.rs
 extensions-meta.json
 public/builtin-extensions.js
+
+# ── Sidex AI (private — lives in separate repo) ─────────────────────────────
+sidexai/
+crates/sidex-agent/
+src/vs/workbench/contrib/sidexChat/browser/sidexChatService.ts
+src/vs/workbench/contrib/sidexChat/browser/localToolExecutor.ts
+
+# ── Secrets ──────────────────────────────────────────────────────────────────
+*.pem
+aws-credentials.json
+.env
+.env.local

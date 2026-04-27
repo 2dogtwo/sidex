@@ -827,7 +827,9 @@ export class SettingsEditor2 extends EditorPane {
 			label += `. ${this.lastSyncedLabel}`;
 		}
 
-		(this.searchWidget as any).updateAriaLabel(label);
+		if (this.searchWidget && typeof (this.searchWidget as any).updateAriaLabel === 'function') {
+			(this.searchWidget as any).updateAriaLabel(label);
+		}
 	}
 
 	/**
