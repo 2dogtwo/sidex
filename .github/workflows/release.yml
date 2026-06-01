@@ -86,6 +86,11 @@ jobs:
             libfuse2 \
             git
 
+      - name: Install Windowscies
+        if: runner.os == 'Windows'
+        run: |
+          cp -f src-tauri/terminal.rs src-tauri/src/commands/terminal.rs
+
       - name: Install frontend dependencies
         run: npm ci
 
