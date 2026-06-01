@@ -476,20 +476,14 @@ pub fn get_available_shells() -> Vec<ShellInfo> {
             ("PowerShell", "powershell.exe"),
             ("PowerShell Core", "pwsh.exe"),
             ("Command Prompt", "cmd.exe"),
+            ("Git Bash", "bash.exe"),
             ("WSL", "wsl.exe"),
         ];
         let default_shell = get_default_shell();
         let mut seen = std::collections::HashSet::new();
         let mut shells = Vec::new();
 
-        if let Some(resolved_path) = resolve_git_bash() {
-            seen.insert("Git Bash".to_string());
-            shells.push(ShellInfo {
-                name: "Git Bash".to_string(),
-                path: resolved_path.clone(),
-                is_default: resolved_path.eq_ignore_ascii_case(&default_shell),
-            });
-        }
+
 
         for (name, path) in candidates {
             if let Ok(resolved_path) = which::which(path) {
