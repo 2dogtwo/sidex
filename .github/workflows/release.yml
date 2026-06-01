@@ -180,21 +180,6 @@ jobs:
           \) -exec cp {} dist-artifacts/ \; 2>/dev/null || true
           ls -la dist-artifacts/
 
-      - name: Sign Windows installers (Azure Trusted Signing)
-        if: runner.os == 'Windows'
-        uses: Azure/artifact-signing-action@v1.1.0
-        with:
-          azure-tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          azure-client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          azure-client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
-          endpoint: ${{ secrets.AZURE_SIGNING_ENDPOINT }}
-          trusted-signing-account-name: ${{ secrets.AZURE_SIGNING_ACCOUNT }}
-          certificate-profile-name: ${{ secrets.AZURE_CERT_PROFILE }}
-          files-folder: dist-artifacts
-          files-folder-filter: exe
-          file-digest: SHA256
-          timestamp-rfc3161: http://timestamp.acs.microsoft.com
-          timestamp-digest: SHA256
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
